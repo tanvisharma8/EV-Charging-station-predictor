@@ -81,7 +81,7 @@ def load_prepare(local_path="ev_final.csv",
     if os.path.exists(local_path):
         df = pd.read_csv(local_path)
     else:
-        st.warning("Local CSV not found, loading from GitHub URL...")
+        
         df = pd.read_csv(fallback_url)
 
     df.columns = [c.strip() for c in df.columns]
@@ -594,3 +594,4 @@ elif page == "Dashboard":
 
 st.sidebar.markdown("---")
 st.sidebar.write("Made with ❤️ — ABT")
+
